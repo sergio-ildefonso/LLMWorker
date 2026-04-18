@@ -78,13 +78,13 @@ bash scripts/publish.sh
 from llmworker import OllamaClient, TextWorker, ImageWorker
 
 client = OllamaClient(base_url="http://localhost:11434")
-text_worker = TextWorker(client, model="llama3.2")
-image_worker = ImageWorker(client, model="sdxl")
+text_worker = TextWorker(client, model="llama3.2:3b")
+image_worker = ImageWorker(client, model="x/flux2-klein:latest")
 
-answer = text_worker.generate("Explain transformers in one paragraph.")
+answer = text_worker.generate("Explain the origin of universe in one paragraph.")
 print(answer)
 
-# Example image generation (model must support images)
-# img_result = image_worker.generate_image("A futuristic city at sunset")
-# print(img_result)
+Example image generation (model must support images)
+img_result = image_worker.generate_image("A futuristic city at sunset")
+print(img_result)
 ```
