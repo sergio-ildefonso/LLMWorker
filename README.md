@@ -62,7 +62,7 @@ pip install -e .
 Don't forget to check / change the project version on pyproject.toml. (example:)
 
 ```
-version = "0.1.2"
+version = "0.1.4"
 ```
 
 ```bash
@@ -92,4 +92,11 @@ print(answer)
 Example image generation (model must support images)
 img_result = image_worker.generate_image("A futuristic city at sunset")
 print(img_result)
+```
+
+
+## PIP install from GitHub
+To install directly from GitHub, use the following command 
+```bash
+pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.4"
 ```
