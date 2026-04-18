@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llmworker"
-version = "0.1.4"
+version = "0.1.5"
 description = "A lightweight Python toolkit for LLM text and image workflows with Ollama."
 readme = "README_PYPI.md"
 requires-python = ">=3.10"

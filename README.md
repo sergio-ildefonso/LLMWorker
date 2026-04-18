@@ -62,7 +62,7 @@ pip install -e .
 Don't forget to check / change the project version on pyproject.toml. (example:)
 
 ```
-version = "0.1.4"
+version = "<put the version here>"
 ```
 
 ```bash
@@ -98,5 +98,5 @@ print(img_result)
 ## PIP install from GitHub
 To install directly from GitHub, use the following command 
 ```bash
-pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.4"
+pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.5"
 ```
