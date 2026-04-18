@@ -59,6 +59,11 @@ pip install -e .
 ```
 
 ## Publish To PyPI
+Don't forget to check / change the project version on pyproject.toml. (example:)
+
+```
+version = "0.1.2"
+```
 
 ```bash
 bash scripts/publish.sh
