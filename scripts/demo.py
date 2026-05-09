@@ -17,7 +17,7 @@ def main() -> None:
     print(f"Time taken: {end_time - start_time} seconds")
 
     # Image generation - base64
-    image_worker = ImageWorker(client=client, model="x/flux2-klein:latest") # example: x/flux2-klein:latest
+    image_worker = ImageWorker(client=client, model="x/flux2-klein:4b") # example: x/flux2-klein:4b
     start_time = time.time()
     options={
         "width": 512,

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation (README)
+    url: https://github.com/sergioildefonso/llmworker#readme
+    about: Install, quick start, and API overview before opening an issue.

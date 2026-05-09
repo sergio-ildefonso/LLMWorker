@@ -100,3 +100,66 @@ To install directly from GitHub, use the following command
 ```bash
 pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.5"
 ```
+
+## Important
+Note: In some Ollama versions (probably, greater than 0.23.0), Ollama is not working stable with image models. 
+It is adviseable to remove the unstable version of Ollama and install a stable version, in example: 0.23.0
+Here are the steps to do it:
+
+---
+
+**a) Uninstall Ollama:**  
+
+1. **Close the application**
+    ```bash
+    killall Ollama
+    ```
+
+2. **Remove the application and executable**
+    ```bash
+    sudo rm -rf /Applications/Ollama.app
+    sudo rm /usr/local/bin/ollama
+    ```
+
+3. **Clear cache and support data**
+    ```bash
+    rm -rf ~/Library/Application\ Support/Ollama
+    rm -rf ~/Library/Caches/com.electron.ollama
+    rm -rf ~/Library/Saved\ Application\ State/com.electron.ollama.savedState
+    ```
+
+4. **(Optional) Delete downloaded templates**
+    ```bash
+    rm -rf ~/.ollama
+    ```
+
+---
+
+**b) Install Ollama Version 0.23.0:**  
+
+1. **Download the official Ollama binary**
+    ```bash
+    curl -L -o Ollama-darwin.zip https://github.com/ollama/ollama/releases/download/v0.23.0/Ollama-darwin.zip
+    ```
+    (Or download manually from [Ollama Releases](https://github.com/ollama/ollama/releases/))
+
+2. **Unzip into the Applications folder**
+    ```bash
+    unzip Ollama-darwin.zip -d /Applications/
+    ```
+    (Or unzip and move the app to `/Applications` manually.)
+
+3. **Delete the zip file to save disk space**
+    ```bash
+    rm Ollama-darwin.zip
+    ```
+
+4. **Create a global symlink for the `ollama` command**
+    ```bash
+    sudo ln -sf /Applications/Ollama.app/Contents/Resources/ollama /usr/local/bin/ollama
+    ```
+
+5. **Remove macOS quarantine on the app**
+    ```bash
+    xattr -r -d com.apple.quarantine /Applications/Ollama.app
+    ```
