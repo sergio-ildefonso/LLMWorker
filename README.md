@@ -98,7 +98,7 @@ print(img_result)
 ## PIP install from GitHub
 To install directly from GitHub, use the following command 
 ```bash
-pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.5"
+pip install "git+https://github.com/sergio-ildefonso/LLMWorker.git@v0.1.7"
 ```
 
 ## Important
